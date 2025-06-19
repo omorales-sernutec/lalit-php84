@@ -66,14 +66,14 @@ trait InitTrait
      * @param string|null $labelValue Defaults to '@value' (Constants::LABEL_VALUE)
      */
     public static function init(
-        string $version = null,
-        string $encoding = null,
-        bool $standalone = null,
-        bool $format_output = null,
-        string $labelAttributes = null,
-        string $labelCData = null,
-        string $labelDocType = null,
-        string $labelValue = null
+        ?string $version = null,
+        ?string $encoding = null,
+        ?bool $standalone = null,
+        ?bool $format_output = null,
+        ?string $labelAttributes = null,
+        ?string $labelCData = null,
+        ?string $labelDocType = null,
+        ?string $labelValue = null
     ) {
         self::setDomVersion($version);
         self::setEncoding($encoding);
@@ -111,22 +111,22 @@ trait InitTrait
         return self::$formatOutput;
     }
 
-    protected static function setDomVersion(string $domVersion = null)
+    protected static function setDomVersion(?string $domVersion = null)
     {
         self::$domVersion = $domVersion ?? Constants::DEFAULT_DOM_VERSION;
     }
 
-    protected static function setEncoding(string $encoding = null)
+    protected static function setEncoding(?string $encoding = null)
     {
         self::$encoding = $encoding ?? Constants::DEFAULT_ENCODING;
     }
 
-    protected static function setStandalone(bool $standalone = null)
+    protected static function setStandalone(?bool $standalone = null)
     {
         self::$standalone = $standalone ?? Constants::DEFAULT_STANDALONE;
     }
 
-    protected static function setFormatOutput(bool $formatOutput = null)
+    protected static function setFormatOutput(?bool $formatOutput = null)
     {
         self::$formatOutput = $formatOutput ?? Constants::DEFAULT_FORMAT_OUTPUT;
     }
@@ -151,22 +151,22 @@ trait InitTrait
         return self::$labelValue;
     }
 
-    protected static function setLabelAttributes(string $labelAttributes = null)
+    protected static function setLabelAttributes(?string $labelAttributes = null)
     {
         self::$labelAttributes = $labelAttributes ?? Constants::LABEL_ATTRIBUTES;
     }
 
-    protected static function setLabelCData(string $labelCData = null)
+    protected static function setLabelCData(?string $labelCData = null)
     {
         self::$labelCData = $labelCData ?? Constants::LABEL_CDATA;
     }
 
-    protected static function setLabelDocType(string $labelDocType = null)
+    protected static function setLabelDocType(?string $labelDocType = null)
     {
         self::$labelDocType = $labelDocType ?? Constants::LABEL_DOCTYPE;
     }
 
-    protected static function setLabelValue(string $labelValue = null)
+    protected static function setLabelValue(?string $labelValue = null)
     {
         self::$labelValue = $labelValue ?? Constants::LABEL_VALUE;
     }
