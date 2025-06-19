@@ -186,7 +186,7 @@ class Array2XML
      * Check if the value contains illegal characters
      * Ref: https://www.w3.org/TR/xml/#NT-Char
      */
-    private static function isValidValue(string $value = null): bool
+    private static function isValidValue(?string $value = null): bool
     {
         $pattern = '/^[\x09\x0A\x0D\x20-\x7E\x85\xA0-\x{D7FF}\x{E000}-\x{FFFD}]*$/u';
 
